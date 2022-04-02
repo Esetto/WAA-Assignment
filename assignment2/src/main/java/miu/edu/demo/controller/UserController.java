@@ -1,7 +1,7 @@
 package miu.edu.demo.controller;
 
 import miu.edu.demo.domain.Post;
-import miu.edu.demo.domain.User;
+import miu.edu.demo.domain.AUser;
 import miu.edu.demo.service.UserService;
 
 import org.springframework.web.bind.annotation.*;
@@ -15,17 +15,17 @@ public class UserController {
     UserService userService;
 
     @GetMapping
-    public List<User> findAllUsers(){
+    public List<AUser> findAllUsers(){
         return userService.findAll();
     }
 
     @GetMapping("/{id}")
-    public User findUserById(@PathVariable("id") long id){
+    public AUser findUserById(@PathVariable("id") long id){
         return userService.findById(id);
     }
 
     @PostMapping
-    public void addUser(@RequestBody User user){
+    public void addUser(@RequestBody AUser user){
         userService.save(user);
     }
 

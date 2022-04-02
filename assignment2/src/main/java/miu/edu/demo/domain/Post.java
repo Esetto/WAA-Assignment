@@ -20,8 +20,8 @@ public class Post {
     private String content;
     private String author;
 
-    @ManyToOne()
-    @JoinColumn()
-    private User user;
+//    @ManyToOne()
+//    @JoinColumn()
+//    private User user;
 
 }
