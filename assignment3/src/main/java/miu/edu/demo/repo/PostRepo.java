@@ -13,4 +13,5 @@ public interface PostRepo extends CrudRepository<Post,Integer> {
     List<Post> findAll();
 
     Post findById(int id);
+    List<Post> findPostByTitle(String title);
 }

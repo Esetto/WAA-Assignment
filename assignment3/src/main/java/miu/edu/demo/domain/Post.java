@@ -3,8 +3,11 @@ package miu.edu.demo.domain;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
 
 import javax.persistence.*;
+import java.util.List;
 
 
 @Data
@@ -20,8 +23,9 @@ public class Post {
     private String content;
     private String author;
 
-//    @ManyToOne()
-//    @JoinColumn()
-//    private User user;
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @Fetch(FetchMode.SUBSELECT)
+    @JoinColumn(name = "post_id")
+    private List<Comment> comments;
 
 }
