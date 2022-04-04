@@ -1,5 +1,6 @@
 package miu.edu.demo.controller;
 
+import miu.edu.demo.aspect.annotation.ExecutionTime;
 import miu.edu.demo.domain.Post;
 import miu.edu.demo.domain.AUser;
 import miu.edu.demo.service.UserService;
@@ -20,6 +21,7 @@ public class UserController {
     }
 
     @GetMapping("/{id}")
+    @ExecutionTime
     public AUser findUserById(@PathVariable("id") long id){
         return userService.findById(id);
     }
