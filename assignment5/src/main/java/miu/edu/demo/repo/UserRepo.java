@@ -11,6 +11,7 @@ import java.util.List;
 public interface UserRepo extends CrudRepository<AUser,Integer> {
     List<AUser> findAll();
     AUser findById(long id);
+    AUser findByEmail(String email);
 
     @Query("select u.posts from AUser u where u.id= :id")
     List<Post> findUserPosts(@Param("id") long id);
