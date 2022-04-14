@@ -1,0 +1,41 @@
+.posts{
+    margin-top: 80px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    width: 80%;
+    margin:auto;
+    align-items: inherit;
+    
+  
+  }
+  .content{
+    background-color: dodgerblue;
+    margin: 5%;
+    width: 20%;
+    color: white;
+    border-style: solid;
+    border-color: rgb(24, 58, 122);
+    height: 100%;
+    padding: auto;
+    
+  }
+  .field{
+    
+    margin-top: 60px;
+    margin-left: 10px;;
+    width: 96%;
+    text-align: center;
+    justify-content: space-around;
+
+    
+  }
+  input{
+    width: 20%;
+  }
+  
+  
+  #root{
+    margin-top: 200px;
+    background-color: ivory;
+  }
