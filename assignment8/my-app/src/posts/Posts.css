@@ -1,4 +1,4 @@
-/* .posts{
+.posts{
     margin-top: 80px;
     display: flex;
     flex-flow: row wrap;
@@ -8,15 +8,4 @@
     align-items: inherit;
     
   
-  } */
- 
-  
-  input{
-    width: 20%;
-  }
-  
-  
-  #root{
-    margin-top: 200px;
-    background-color: ivory;
   }

@@ -5,6 +5,7 @@ import './PostDetail.css'
 
 const PostDetails = (props) => {
 
+console.log("POSTDETAILS UPDATE");
     const [postDetail, setPostDetail] = useState([]);
 
     useEffect(
@@ -12,6 +13,7 @@ const PostDetails = (props) => {
             axios.get('http://localhost:8080/posts/' + props.id + '/comments')
                 .then(response => {
                     setPostDetail(response.data)
+                    console.log("RESPONSE:", response.data)
                 })
                 .catch(err => console.log(err.message))
         },
