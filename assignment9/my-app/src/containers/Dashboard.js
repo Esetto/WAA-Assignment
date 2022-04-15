@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import NewPost from '../components/newpost/NewPost';
 import PostDetails from '../components/PostDetails/PostDetails';
 import Posts from '../posts/Posts';
+import { ThemeColorContext } from '../store/ThemeColor';
 
 import './Dashboard.css';
 

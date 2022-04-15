@@ -24,7 +24,7 @@ public class Post {
     private String author;
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @Fetch(FetchMode.SUBSELECT)
+    @Fetch(FetchMode.JOIN)
     @JoinColumn(name = "post_id")
     private List<Comment> comments;
 

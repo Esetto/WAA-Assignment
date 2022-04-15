@@ -6,6 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+
 @CrossOrigin
 @RestController
 @RequestMapping("/posts")
@@ -20,7 +21,7 @@ public class PostController {
     }
     @GetMapping
     public List<Post> getAll(){
-        return null;
+        return postService.findAll();
     }
     @GetMapping("/{id}")
     public ResponseEntity<Post> getById(@PathVariable int id){

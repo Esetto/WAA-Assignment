@@ -22,22 +22,24 @@ public class PostServiceImpl implements PostService{
     ModelMapper modelMapper;
 
     @Override
-    public List<PostDto> findAll() {
-        var allPosts= postRepository.findAll();
-        return allPosts.stream().map(post->modelMapper.map(post, PostDto.class)).collect(Collectors.toList());
+    public List<Post> findAll() {
+//        var allPosts= postRepository.findAll();
+//        return allPosts.stream().map(post->modelMapper.map(post, PostDto.class)).collect(Collectors.toList());
+        return postRepository.findAll();
     }
 
     @Override
-    public Post findById(long id) {
-        var post= postRepository.findById((int) id);
-
-        Post post1= modelMapper.map(post, Post.class);
-        return post1;
+    public Post findById(int id) {
+//        var post= postRepository.findById((int) id);
+//
+//        Post post1= modelMapper.map(post, Post.class);
+//        return post1;
+        return postRepository.findById(id);
     }
 
     @Override
     public void addPost(Post post) {
-        postRepository.save(modelMapper.map(post, Post.class));
+        postRepository.save(post);
     }
 
     @Override

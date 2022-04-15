@@ -1,0 +1,21 @@
+.Content{
+    background-color: dodgerblue;
+    margin: 5%;
+    width: 20%;
+    color: white;
+    border-style: solid;
+    border-color: rgb(24, 58, 122);
+    height: 100%;
+    padding: auto;
+    
+  }
+  .Field{
+    
+    margin-top: 60px;
+    margin-left: 10px;;
+    width: 96%;
+    text-align: center;
+    justify-content: space-around;
+
+    
+  }

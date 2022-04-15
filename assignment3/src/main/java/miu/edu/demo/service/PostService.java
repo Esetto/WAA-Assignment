@@ -6,8 +6,8 @@ import miu.edu.demo.domain.dto.PostDto;
 import java.util.List;
 
 public interface PostService {
-    List<PostDto> findAll();
-    Post findById(long id);
+    List<Post> findAll();
+    Post findById(int id);
     void addPost(Post post);
 
     void delete(long id);
